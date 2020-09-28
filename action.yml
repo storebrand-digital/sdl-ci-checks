@@ -1,6 +1,5 @@
 name: 'sdl-ci-checks'
 description: 'Perform SDL related checks'
-inputs:
 outputs:
   sdl-checks-ok:
     description: "Does the checks satisfy the SDL requirements?"
