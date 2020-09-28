@@ -1,0 +1,15 @@
+name: 'sdl-ci-checks'
+description: 'Perform SDL related checks'
+inputs:
+outputs:
+  sdl-checks-ok:
+    description: "Does the checks satisfy the SDL requirements?"
+    value: ${{ steps.sdlcheck.outputs.ok }}
+runs:
+  using: 'composite'
+  steps:
+    - id: sdlcheck
+      run: ${{ github.action_path }}/check.sh 
+      shell: bash
+    - name: The job has succeeded
+      if: ${{ success() }}
