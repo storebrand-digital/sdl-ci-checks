@@ -11,5 +11,3 @@ runs:
     - id: sdlcheck
       run: ${{ github.action_path }}/check.sh 
       shell: bash
-    - name: The job has succeeded
-      if: ${{ success() }}
