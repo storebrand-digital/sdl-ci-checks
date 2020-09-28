@@ -1,5 +1,9 @@
 name: 'sdl-ci-checks'
 description: 'Perform SDL related checks'
+inputs:
+  thanks-to:
+    description: "Who to thank"
+    required: true
 outputs:
   sdl-checks-ok:
     description: "Does the checks satisfy the SDL requirements?"
