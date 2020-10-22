@@ -1,9 +1,20 @@
 #!/bin/bash
 
-env 
 SECF="SECURITY.MD"
 READF="README.MD"
 
+
+
+echo -e "Running SDL CI checks.\n"
+
+echo -e "Printing working dir.\n"
+echo -e "PWD=$PWD\n"
+
+
+echo -e "Printing environment variables...\n"
+env 
+
+echo
 
 if [[ -n $(find . -maxdepth 1 -iname "${READF}") ]]; then
     echo "${READF} doesn't exist."
