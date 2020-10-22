@@ -3,9 +3,6 @@
 SECF="SECURITY.MD"
 READF="README.MD"
 
-ls -la
-
-
 echo -e "Running SDL CI checks.\n"
 
 echo -e "Printing working dir.\n"
@@ -17,12 +14,12 @@ env
 
 echo
 
-if [[ -n $(find . -maxdepth 1 -iname "${READF}") ]]; then
+if [[ -z $(find . -maxdepth 1 -iname "${READF}") ]]; then
     echo "${READF} doesn't exist."
     exit 1
 fi
 
-if [[ -n $(find . -maxdepth 1 -iname "${SECF}")  ]]; then
+if [[ -z $(find . -maxdepth 1 -iname "${SECF}")  ]]; then
     echo "${SECF} doesn't exist."
     exit 1
 fi
