@@ -5,12 +5,12 @@ SECF="SECURITY.MD"
 READF="README.MD"
 
 
-if [ ! -f "${READF}" ]; then
+if [[ -n $(find . -maxdepth 1 -iname "${READF}") ]]; then
     echo "${READF} doesn't exist."
     exit 1
 fi
 
-if [ ! -f "${SECF}" ]; then
+if [[ -n $(find . -maxdepth 1 -iname "${SECF}")  ]]; then
     echo "${SECF} doesn't exist."
     exit 1
 fi
