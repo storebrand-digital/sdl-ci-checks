@@ -3,6 +3,7 @@
 SECF="SECURITY.MD"
 READF="README.MD"
 
+ls -la
 
 
 echo -e "Running SDL CI checks.\n"
