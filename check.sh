@@ -32,7 +32,7 @@ fi
 
 if [ ! -f "${READMEFILENAME}" ]; then
   echo "::error file=${READMEFILENAME}::file doesn't exist!"
-  echo "This is a requirement in the SDLC: https://wiki.stb.intra/display/DKUF/Phase+2%3A+Design+to+Meet+Security+Requirements"
+  echo "This is a requirement in the SDLC: https://storebrand.atlassian.net/wiki/spaces/SDRM/pages/44242398/Phase+2+Design+to+Meet+Security+Requirements"
   exit 1
 fi
 
